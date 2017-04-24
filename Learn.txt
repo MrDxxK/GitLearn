@@ -95,6 +95,10 @@ Git 分支
   Create and checkout branch
   	git checkout -b branchName
   Merge:
-  	git merge feature  				有时会产生冲突，此时这两个文件中会被git标记
+  	git merge branchName      将branchName分支合并到当前分支
+							  有时会产生冲突，此时这两个文件中会被git标记
+
   Delete:
   	git branch -d branchName  		或者用--delete
+
+

@@ -1,3 +1,4 @@
 This file is used to learn branch control
 Add in branch master
 Add new line in branch newFeature
+Add new line in branch newFeature2
