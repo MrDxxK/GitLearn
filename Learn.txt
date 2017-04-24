@@ -121,3 +121,4 @@ Checkout reset 详解
 恢复快照:
 	checkout 比 reset --hard 更安全, checkout在切换分支前会检查当前的工作状态,如果不是clean,Git不允许. 而reset --hard直接覆盖所有数据
 	reset 命令会移动HEAD所在分支的指向, checkout 只会移动HEAD来指向另一个分支
+	reset --hard危险,这将会使git log和实际不符,非特殊情况不得使用
