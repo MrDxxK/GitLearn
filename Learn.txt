@@ -8,7 +8,36 @@ Check your configuration:
 Make repositories
 	git init                       
 Add files that needs version control
-	git add YourFileName    
+	git add <YourFileName>    
 	git commit -m "Modify message"
 Check status
 	git status
+Reset the file that u dont wanna track
+	git reset HEAD <file>
+	git reset HEAD
+Discard the changes(Dangerous command)
+	git checkout -- <file>
+
+在这三棵树中可以有三个不同版本的文件
+
+Check 'commit' history log
+	git log
+
+
+Reset:
+	git reset HEAD~   回到上一个版本
+	                  git log 是一个单向链表，所以此时看不见“未来”的快照
+	git reset HEAD~~  回到上两个
+	git reset HEAD~10 回到上10个
+ Return back	
+	git reset --mixed HEAD~  [default]
+							 移动HEAD的指向，将移动后的快照回滚到暂存区
+	
+	git reset --soft HEAD~   移动HEAD，指向上一个
+	
+	git reset --hard HEAD~   移动HEAD,回滚暂存区，
+							 再将暂存区文件还原到工作区
+	git reset 版本快照 文件名/路径
+ Return to future
+ 	git reflog   			 查看分支操作记录
+	git reset [--option] commitid   commmitid是git reflog中对应的commitid
