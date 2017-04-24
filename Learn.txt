@@ -68,3 +68,15 @@ Diff:
 	 g:第一行 G:最后一行   其他看vim教程
 	 h:帮助文档
 
+
+Amend:
+	修复log,但是不新建快照
+	git commit --amend [-m] 
+
+Rm:
+	git rm <file>	     只是删除工作目录和暂存区域的文件，就是取消跟踪，下次提交不纳入版本管理	再git reset --soft HEAD~
+	git rm -f <file>     当工作区域混合暂存区同名文件内容不同，用-f强制删除
+	git rm --cached <file>     只删除暂存区文件（保留工作目录）
+
+Mv:
+	git mv oldname  newname   更改文件名
