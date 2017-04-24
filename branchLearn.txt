@@ -1,1 +1,2 @@
 This file is used to learn branch control
+Add in branch master
