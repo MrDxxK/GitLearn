@@ -80,3 +80,14 @@ Rm:
 
 Mv:
 	git mv oldname  newname   更改文件名
+
+
+
+Git 分支	
+  Create branch:
+	git branch branchName
+	git log --decorate --oneline   	--decorate 显示指向这个分支的所有引用
+ 									--oneline  每个说明只有一行
+  Checkout branch:
+    git checkout branchName
+	
