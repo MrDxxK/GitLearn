@@ -1,0 +1,13 @@
+Configure before using Git:
+	git config --global user.name "Your name"
+	git config --global user.email "Your email"
+Check your configuration:
+	git config --list
+
+
+Make repositories
+	git init                       
+Add files that needs version control
+	git add YourFileName    
+	git commit -m "Modify message"
+
