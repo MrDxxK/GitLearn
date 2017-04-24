@@ -86,6 +86,7 @@ Mv:
 Git 分支	
   Create branch:
 	git branch branchName
+	git branch branchName snapshotId
 	git log --decorate --oneline   	--decorate 显示指向这个分支的所有引用
  									--oneline  每个说明只有一行
 									--all      显示所有
@@ -100,5 +101,23 @@ Git 分支
 
   Delete:
   	git branch -d branchName  		或者用--delete
+  
+  Anonymous branch:
+  	git checkout HEAD~        没有新建分支，但是进入了前一个快照，在这个快照中所有的改动都不会真正改变这个快照本身
+							  此时如果切换分支，会提示
 
+Checkout reset 详解
+  Checkout:从历史快照（或暂存区）拷贝文件到工作目录,
+  		   执行checkout时,只会移动HEAD
+	
+	git checkout --file   从暂存区,如果分支中没有名为file的,也可以不用'--'
+	git checkout HEAD~ file  从快照中
+	
+恢复文件:
+	checkout和reset均可以
+	但是reset只能讲文件恢复到暂存区，checkout是同时覆盖暂存区和工作区
+	因为git reset HEAD~ file此时不能用--soft,--hard
 
+恢复快照:
+	checkout 比 reset --hard 更安全, checkout在切换分支前会检查当前的工作状态,如果不是clean,Git不允许. 而reset --hard直接覆盖所有数据
+	reset 命令会移动HEAD所在分支的指向, checkout 只会移动HEAD来指向另一个分支
