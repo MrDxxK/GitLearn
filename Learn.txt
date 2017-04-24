@@ -46,6 +46,11 @@ Reset:
 Diff:
 	git diff     比较暂存区域与工作目录
 	git diff commitid1 commitid2  比较两次历史快照
+								  其中commitid1为+ commitid2为-
+	git diff commitid             比较工作目录与快照
+	git diff HEAD                 比较比较工作目录与最新快照
+	git diff --cached  commitid   比较暂存区域与仓库快照
+					   HEAD       同理
 	-开头的行，是只出现在源文件中的行
 	+开头的行，是只出现在目标文件中的行
 	空格开头的行，是源文件和目标文件中都出现的行
