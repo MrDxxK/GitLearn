@@ -41,3 +41,25 @@ Reset:
  Return to future
  	git reflog   			 查看分支操作记录
 	git reset [--option] commitid   commmitid是git reflog中对应的commitid
+
+
+Diff:
+	git diff     比较暂存区域与工作目录
+	git diff commitid1 commitid2  比较两次历史快照
+	-开头的行，是只出现在源文件中的行
+	+开头的行，是只出现在目标文件中的行
+	空格开头的行，是源文件和目标文件中都出现的行
+	差异按照差异小结进行组织，每个差异小结的第一行都是定位语句，由@@开头，@@结尾。
+
+	
+	diff --git a/learnDiff b/learnDiff   //比较暂存区域和工作区域的路径
+	index dc72bde..00aecca 100644        //指定类型文件Hash   权限
+	--- a/learnDiff                      // 暂存区旧文件,变动前
+	+++ b/learnDiff						 //工作区新文件,变动后
+	@@ -2,6 +2,6 @@					     //在源文件第2行开始的6行和目标文件第2行开始的6行构成一个差异小结
+
+    如果出现  ':'  表示没有显示完，
+	 j:下一行 k:上一行 f:下一页  b:上一页  d:下半页  u:上半页 
+	 g:第一行 G:最后一行   其他看vim教程
+	 h:帮助文档
+
