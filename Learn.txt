@@ -88,8 +88,13 @@ Git 分支
 	git branch branchName
 	git log --decorate --oneline   	--decorate 显示指向这个分支的所有引用
  									--oneline  每个说明只有一行
-									--graph    图形化显示
-									--all      显示所有分枝
+									--all      显示所有
+									--graph    图像显示
   Checkout branch:
     git checkout branchName
-	
+  Create and checkout branch
+  	git checkout -b branchName
+  Merge:
+  	git merge feature  				有时会产生冲突，此时这两个文件中会被git标记
+  Delete:
+  	git branch -d branchName  		或者用--delete
