@@ -10,4 +10,5 @@ Make repositories
 Add files that needs version control
 	git add YourFileName    
 	git commit -m "Modify message"
-
+Check status
+	git status
