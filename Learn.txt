@@ -12,7 +12,7 @@ Add files that needs version control
 	git commit -m "Modify message"
 Check status
 	git status
-Reset the file that u dont wanna track
+Reset the file that u don’t wanna track
 	git reset HEAD <file>
 	git reset HEAD
 Discard the changes(Dangerous command)
@@ -122,3 +122,21 @@ Checkout reset 详解
 	checkout 比 reset --hard 更安全, checkout在切换分支前会检查当前的工作状态,如果不是clean,Git不允许. 而reset --hard直接覆盖所有数据
 	reset 命令会移动HEAD所在分支的指向, checkout 只会移动HEAD来指向另一个分支
 	reset --hard危险,这将会使git log和实际不符,非特殊情况不得使用
+
+
+
+Git 远程仓库
+	Configuration:
+		git remote add origin git@github.com:MrDxxK/GitLearn.git
+
+	创建:这个就不讲了
+	
+	提取远程仓库:
+	 1.从远程仓库下载新分支与数据：
+		git fetch         该命令执行完后需要执行git merge 远程分支到你所在的分支。
+	 2.从远端仓库提取数据并尝试合并到当前分支
+	    git pull		  该命令就是在执行 git fetch 之后紧接着执行 git merge 远程分支到你所在的任意分支。
+	
+	推送你的新分支与数据到某个远端仓库命令:
+		git push [alias] [branch]   将你的 [branch] 分支推送成为 [alias] 远程仓库上的 [branch] 分支
+	
